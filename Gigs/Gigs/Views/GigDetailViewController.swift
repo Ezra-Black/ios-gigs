@@ -33,6 +33,7 @@ class GigDetailViewController: UIViewController {
         textField.text = gig.title
         datePicker.date = gig.dueDate
         textView.text = gig.description
+            navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(saveTapped(_:)))
         } else {
             self.title = "New Gig"
         }
